@@ -98,9 +98,48 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({17:[function(require,module,exports) {
+})({4:[function(require,module,exports) {
+var daysContainer = document.getElementById('days');
+var hoursContainer = document.getElementById('hours');
+var minsContainer = document.getElementById('mins');
+var secsContainer = document.getElementById('secs');
 
-},{}],25:[function(require,module,exports) {
+var deadline = '2018-06-28 GMT+01:00';
+
+function getRemainingTime(endtime) {
+  var time = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor(time / 1000 % 60);
+  var minutes = Math.floor(time / 1000 / 60 % 60);
+  var hours = Math.floor(time / (1000 * 60 * 60) % 24);
+  var days = Math.floor(time / (1000 * 60 * 60 * 24));
+  return {
+    total: time,
+    days: days,
+    hours: hours,
+    minutes: minutes,
+    seconds: seconds
+  };
+}
+
+var remainingTime = getRemainingTime(deadline);
+
+daysContainer.innerHTML = remainingTime.days;
+hoursContainer.innerHTML = remainingTime.hours;
+minsContainer.innerHTML = remainingTime.minutes;
+secsContainer.innerHTML = remainingTime.seconds;
+
+var countdown = setInterval(function () {
+  var remainingTime = getRemainingTime(deadline);
+
+  daysContainer.innerHTML = remainingTime.days;
+  hoursContainer.innerHTML = remainingTime.hours;
+  minsContainer.innerHTML = remainingTime.minutes;
+  secsContainer.innerHTML = remainingTime.seconds;
+  if (remainingTime <= 0) {
+    clearInterval(countdown);
+  }
+}, 1000);
+},{}],15:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -129,7 +168,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '49704' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '63788' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -270,4 +309,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[25,17], null)
+},{}]},{},[15,4], null)
+//# sourceMappingURL=/main.63cb77f9.map

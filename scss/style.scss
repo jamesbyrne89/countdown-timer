@@ -1,32 +1,46 @@
 body {
-    min-height: 100vh;
-    background: -webkit-gradient(linear, left bottom, left top, from(#a8edea), to(#fed6e3));
-    background: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
-}
-
-h1 {
-    color: mintcream;
-    font-size: 8rem;
-    position: relative;
-    line-height: 1;
-}
-
-.container {
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
+    height: calc(100vh - 40px);
+    width: calc(100vw - 40px);
+    background: #c0dfe0;
+    border: solid 20px white;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: mintcream;
+    font-size: 1rem;
+    @media (max-width: 480px) {
+        font-size: 0.75rem;
+        border: solid 10px white;
+        min-height: calc(100vh - 20px);
+        width: calc(100vw - 20px);
+    }
+}
+
+h1 {
+    font-size: 8rem;
+    position: relative;
+    line-height: 1;
+    font-family: inherit;
+}
+
+.container {
+    max-width: 800px;
+    text-align: center;
 }
 
 .countdown-timer {
+    font-family: 'open sans', helvetica;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    margin-top: 2rem;
+    text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -40,9 +54,10 @@ h1 {
 
 .event {
     font-size: 5rem;
-    color: mintcream;
-    font-family: 'sue ellen francisco', georgia;
-    margin-left: 1em;
+    font-family: 'great vibes', georgia;
+    @media (max-width: 480px) {
+        font-size: 2rem;
+    }
 }
 
 .days {
@@ -51,24 +66,30 @@ h1 {
 }
 
 .heart {
-    background-color: hotpink;
-    height: 10rem;
+    background-color: #ECCBD6;
+    height: 1.5rem;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    width: 10rem;
-    position: absolute;
-    bottom: 24%;
-    left: -1.5%;
+    width: 1.5rem;
+    margin: 2rem auto;
+    @media (max-width: 480px) {
+        height: 0.75rem;
+        width: 0.75rem;
+    }
 }
 
 .heart:before,
 .heart:after {
     content: "";
-    background-color: hotpink;
+    background-color: #ECCBD6;
     border-radius: 50%;
-    height: 10rem;
+    height: 1.5rem;
     position: absolute;
-    width: 10rem;
+    width: 1.5rem;
+    @media (max-width: 480px) {
+        height: 0.75rem;
+        width: 0.75rem;
+    }
 }
 
 .heart:before {
@@ -79,4 +100,15 @@ h1 {
 .heart:after {
     top: 0;
     left: 50%;
+}
+
+.time {
+    font-size: 6rem;
+    font-weight: 700;
+    margin: 0 2rem;
+    min-width: 1.5em;
+    @media(max-width: 480px) {
+        font-size: 2rem;
+        margin: 0 1rem;
+    }
 }
