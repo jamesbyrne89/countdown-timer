@@ -4,12 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
+    <title>Wedding Countdown</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Place favicon.ico in the root directory -->
-    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Open+Sans:400,700" rel="stylesheet">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Playfair+Display:400,700" rel="stylesheet">
     <link rel="stylesheet" href="scss/normalize.css">
     <link rel="stylesheet" href="scss/style.min.css">
 </head>
@@ -17,8 +19,14 @@
 <body>
     <main class="container">
 
-        <div class="event">Wedding of Alex & Robin</div>
-        <div class="heart"></div>
+        <div class="event">
+            <span>Alex</span>
+            <div class="heart">
+                <span>&</span>
+            </div>
+            <span>Robin</span>
+        </div>
+
         <time class="countdown-timer">
             <div>
                 <div id="days" class="time"></div>
@@ -30,7 +38,7 @@
             </div>
             <div>
                 <div id="mins" class="time"></div>
-                <div>Mins</div>
+                <div>Minutes</div>
             </div>
             <div>
                 <div id="secs" class="time"></div>

@@ -139,7 +139,7 @@ var countdown = setInterval(function () {
     clearInterval(countdown);
   }
 }, 1000);
-},{}],15:[function(require,module,exports) {
+},{}],7:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -168,7 +168,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '63788' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '55345' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -309,5 +309,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[15,4], null)
+},{}]},{},[7,4], null)
 //# sourceMappingURL=/main.63cb77f9.map

@@ -1,8 +1,8 @@
 body {
   height: calc(100vh - 40px);
   width: calc(100vw - 40px);
-  background: #c0dfe0;
-  border: solid 20px white;
+  background: #cce5e1;
+  border: solid 20px mintcream;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,16 +12,24 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: mintcream;
+  color: #555;
   font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @media (max-width: 480px) {
   body {
     font-size: 0.75rem;
-    border: solid 10px white;
+    border: solid 10px mintcream;
     min-height: calc(100vh - 20px);
     width: calc(100vw - 20px);
+  }
+}
+
+@media (max-width: 360px) {
+  body {
+    font-size: 0.675rem;
   }
 }
 
@@ -33,15 +41,16 @@ h1 {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 95%;
   text-align: center;
 }
 
 .countdown-timer {
-  font-family: 'open sans', helvetica;
+  font-family: 'lato', helvetica;
   text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.25em;
+  font-variant-numeric: tabular-nums;
   margin-top: 2rem;
   text-align: center;
   display: -webkit-box;
@@ -53,17 +62,46 @@ h1 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border-top: solid 1px #555;
+  border-bottom: solid 1px #555;
+  padding: 1.5em 0 2em;
 }
 
 .event {
-  font-size: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 7.5rem;
   font-family: 'great vibes', georgia;
+}
+
+@media (max-width: 667px) {
+  .event {
+    font-size: 5rem;
+  }
 }
 
 @media (max-width: 480px) {
   .event {
-    font-size: 2rem;
+    font-size: 3.5rem;
   }
+}
+
+@media (max-width: 360px) {
+  .event {
+    font-size: 3rem;
+  }
+}
+
+.event > span {
+  margin: 0 1rem 0 0;
+}
+
+.event > span:last-of-type {
+  margin-right: 0;
 }
 
 .days {
@@ -72,36 +110,76 @@ h1 {
 }
 
 .heart {
-  background-color: #ECCBD6;
-  height: 1.5rem;
+  background-color: #eccbd6;
+  height: 3.5rem;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  width: 1.5rem;
-  margin: 2rem auto;
+  width: 3.5rem;
+  margin: 2rem;
+  font-size: 4rem;
+}
+
+@media (max-width: 667px) {
+  .heart {
+    font-size: 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
   .heart {
-    height: 0.75rem;
-    width: 0.75rem;
+    font-size: 2rem;
+    height: 1.75rem;
+    width: 1.75rem;
   }
+}
+
+.heart span {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  left: 0.1rem;
+  right: 0;
+  bottom: 0.1rem;
+  line-height: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .heart:before,
 .heart:after {
-  content: "";
-  background-color: #ECCBD6;
+  content: '';
+  background-color: #eccbd6;
   border-radius: 50%;
-  height: 1.5rem;
+  height: 3.5rem;
   position: absolute;
-  width: 1.5rem;
+  width: 3.5rem;
+  z-index: -1;
+}
+
+@media (max-width: 667px) {
+  .heart:before,
+  .heart:after {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
 }
 
 @media (max-width: 480px) {
   .heart:before,
   .heart:after {
-    height: 0.75rem;
-    width: 0.75rem;
+    height: 1.75rem;
+    width: 1.75rem;
   }
 }
 
@@ -122,9 +200,28 @@ h1 {
   min-width: 1.5em;
 }
 
+@media (max-width: 900px) {
+  .time {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 667px) {
+  .time {
+    font-size: 3rem;
+    margin: 0 0.5rem;
+  }
+}
+
 @media (max-width: 480px) {
   .time {
     font-size: 2rem;
     margin: 0 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .time {
+    margin: 0 0.75rem;
   }
 }
