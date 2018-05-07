@@ -20,7 +20,7 @@ body {
 
 @media (max-width: 480px) {
   body {
-    font-size: 0.75rem;
+    font-size: 0.675rem;
     border: solid 10px mintcream;
     min-height: calc(100vh - 20px);
     width: calc(100vw - 20px);
