@@ -3,7 +3,7 @@ const hoursContainer = document.getElementById('hours');
 const minsContainer = document.getElementById('mins');
 const secsContainer = document.getElementById('secs');
 
-const deadline = '2018-06-28 GMT+01:00';
+const deadline = '2019-05-04 GMT+01:00';
 
 function getRemainingTime(endtime) {
   let time = Date.parse(endtime) - Date.parse(new Date());

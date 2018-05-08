@@ -104,7 +104,7 @@ var hoursContainer = document.getElementById('hours');
 var minsContainer = document.getElementById('mins');
 var secsContainer = document.getElementById('secs');
 
-var deadline = '2018-06-28 GMT+01:00';
+var deadline = '2019-05-04 GMT+01:00';
 
 function getRemainingTime(endtime) {
   var time = Date.parse(endtime) - Date.parse(new Date());
@@ -139,7 +139,7 @@ var countdown = setInterval(function () {
     clearInterval(countdown);
   }
 }, 1000);
-},{}],8:[function(require,module,exports) {
+},{}],10:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -168,7 +168,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '50107' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '57778' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -309,5 +309,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[8,5], null)
+},{}]},{},[10,5], null)
 //# sourceMappingURL=/main.63cb77f9.map
