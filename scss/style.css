@@ -2,7 +2,7 @@ body {
   height: calc(100vh - 40px);
   width: calc(100vw - 40px);
   background: #cce5e1;
-  border: solid 20px mintcream;
+  border: solid 20px #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,7 +21,7 @@ body {
 @media (max-width: 480px) {
   body {
     font-size: 0.675rem;
-    border: solid 10px mintcream;
+    border: solid 10px #fff;
     min-height: calc(100vh - 20px);
     width: calc(100vw - 20px);
   }
